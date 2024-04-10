@@ -79,9 +79,7 @@ begin
 			-- Component Generics
 			NumOfClocks_g				=> 2,
 			AxiClkFreq_g				=> integer(ClockFrequencyAxi_c),
-			MaxClkFreq_g				=> 250_000_000,
-			-- AXI
-			C_S00_AXI_ID_WIDTH     	 	=> ID_WIDTH	
+			MaxClkFreq_g				=> 250_000_000
 		)
 		port map
 		(
@@ -91,38 +89,20 @@ begin
 			-- Axi Slave Bus Interface
 			s00_axi_aclk    	=> aclk,
 			s00_axi_aresetn  	=> aresetn,
-			s00_axi_arid        => axi_ms.arid,
 			s00_axi_araddr      => axi_ms.araddr,
-			s00_axi_arlen       => axi_ms.arlen,
-			s00_axi_arsize      => axi_ms.arsize,
-			s00_axi_arburst     => axi_ms.arburst,
-			s00_axi_arlock      => axi_ms.arlock,
-			s00_axi_arcache     => axi_ms.arcache,
-			s00_axi_arprot      => axi_ms.arprot,
 			s00_axi_arvalid     => axi_ms.arvalid,
 			s00_axi_arready     => axi_sm.arready,
-			s00_axi_rid         => axi_sm.rid,
 			s00_axi_rdata       => axi_sm.rdata,
 			s00_axi_rresp       => axi_sm.rresp,
-			s00_axi_rlast       => axi_sm.rlast,
 			s00_axi_rvalid      => axi_sm.rvalid,
 			s00_axi_rready      => axi_ms.rready,
-			s00_axi_awid    	=> axi_ms.awid,    
 			s00_axi_awaddr      => axi_ms.awaddr,
-			s00_axi_awlen       => axi_ms.awlen,
-			s00_axi_awsize      => axi_ms.awsize,
-			s00_axi_awburst     => axi_ms.awburst,
-			s00_axi_awlock      => axi_ms.awlock,
-			s00_axi_awcache     => axi_ms.awcache,
-			s00_axi_awprot      => axi_ms.awprot,
 			s00_axi_awvalid     => axi_ms.awvalid,
 			s00_axi_awready     => axi_sm.awready,
 			s00_axi_wdata       => axi_ms.wdata,
 			s00_axi_wstrb       => axi_ms.wstrb,
-			s00_axi_wlast       => axi_ms.wlast,
 			s00_axi_wvalid      => axi_ms.wvalid,
 			s00_axi_wready      => axi_sm.wready,
-			s00_axi_bid         => axi_sm.bid,
 			s00_axi_bresp       => axi_sm.bresp,
 			s00_axi_bvalid      => axi_sm.bvalid,
 			s00_axi_bready      => axi_ms.bready			

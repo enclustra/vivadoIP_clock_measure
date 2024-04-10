@@ -19,15 +19,6 @@ proc validate_PARAM_VALUE.AxiClkFreq_g { PARAM_VALUE.AxiClkFreq_g } {
 	return true
 }
 
-proc update_PARAM_VALUE.C_S00_AXI_ID_WIDTH { PARAM_VALUE.C_S00_AXI_ID_WIDTH } {
-	# Procedure called to update C_S00_AXI_ID_WIDTH when any of the dependent parameters in the arguments change
-}
-
-proc validate_PARAM_VALUE.C_S00_AXI_ID_WIDTH { PARAM_VALUE.C_S00_AXI_ID_WIDTH } {
-	# Procedure called to validate C_S00_AXI_ID_WIDTH
-	return true
-}
-
 proc update_PARAM_VALUE.MaxClkFreq_g { PARAM_VALUE.MaxClkFreq_g } {
 	# Procedure called to update MaxClkFreq_g when any of the dependent parameters in the arguments change
 }
@@ -60,10 +51,5 @@ proc update_MODELPARAM_VALUE.AxiClkFreq_g { MODELPARAM_VALUE.AxiClkFreq_g PARAM_
 proc update_MODELPARAM_VALUE.MaxClkFreq_g { MODELPARAM_VALUE.MaxClkFreq_g PARAM_VALUE.MaxClkFreq_g } {
 	# Procedure called to set VHDL generic/Verilog parameter value(s) based on TCL parameter value
 	set_property value [get_property value ${PARAM_VALUE.MaxClkFreq_g}] ${MODELPARAM_VALUE.MaxClkFreq_g}
-}
-
-proc update_MODELPARAM_VALUE.C_S00_AXI_ID_WIDTH { MODELPARAM_VALUE.C_S00_AXI_ID_WIDTH PARAM_VALUE.C_S00_AXI_ID_WIDTH } {
-	# Procedure called to set VHDL generic/Verilog parameter value(s) based on TCL parameter value
-	set_property value [get_property value ${PARAM_VALUE.C_S00_AXI_ID_WIDTH}] ${MODELPARAM_VALUE.C_S00_AXI_ID_WIDTH}
 }
 

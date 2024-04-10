@@ -43,6 +43,7 @@ add_lib_relative \
 		psi_common_logic_pkg.vhd \
 		psi_common_pl_stage.vhd \
 		psi_common_axi_slave_ipif.vhd \
+		psi_common_axilite_slave_ipif.vhd \
 	}
 
 ###############################################################
